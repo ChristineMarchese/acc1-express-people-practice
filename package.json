@@ -5,12 +5,16 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "db:init": "psql -U postgres -f db/schema.sql",
+    "db:seed": "psql -U postgres -f db/seed.sql"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.1"
+    "dotenv": "^16.4.7",
+    "express": "^4.21.1",
+    "pg-promise": "^11.10.2"
   }
 }
